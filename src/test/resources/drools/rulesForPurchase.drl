@@ -1,0 +1,18 @@
+import hu.grape.nkmrtd.domain.Event;
+global hu.grape.nkmrtd.drools.ActionActivator activator;
+
+rule "Hello test for purchase event"
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event", event);
+end
+
+
+
+
+
+
+
+
+

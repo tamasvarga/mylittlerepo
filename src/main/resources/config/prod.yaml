@@ -1,0 +1,12 @@
+pubsub:
+  subscription:
+    event: events-master-subscription
+
+datastore:
+  kind:
+    event: Event
+    decision-history: DecisionHistory
+
+storage:
+  bucket_name: rtdpublic
+  folder_namne: RulesProd/

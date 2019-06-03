@@ -1,0 +1,18 @@
+import hu.grape.nkmrtd.domain.Event;
+global hu.grape.nkmrtd.drools.ActionActivator activator;
+
+rule "Hello test for loan event"
+when
+  event:Event (type == 'Loan')
+then
+  activator.sendEmail("Welcome test for loan event", event);
+end
+
+
+
+
+
+
+
+
+

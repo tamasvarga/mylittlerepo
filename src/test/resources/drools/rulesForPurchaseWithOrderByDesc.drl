@@ -1,0 +1,37 @@
+import hu.grape.nkmrtd.domain.Event;
+global hu.grape.nkmrtd.drools.ActionActivator activator;
+
+rule "Hello test for purchase event 1" salience 1
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event 1", event);
+end
+
+rule "Hello test for purchase event 2" salience 2
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event 2", event);
+end
+
+rule "Hello test for purchase event 3" salience 3
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event 3", event);
+end
+
+rule "Hello test for purchase event 4" salience 4
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event 4", event);
+end
+
+rule "Hello test for purchase event 5" salience 5
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Welcome test for purchase event 5", event);
+end

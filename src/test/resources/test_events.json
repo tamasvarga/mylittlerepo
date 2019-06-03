@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Purchase",
+    "properties": {
+      "UserId": "9999",
+      "Amount": "1000"
+    },
+    "appliedActions": []
+  },
+  {
+    "type": "Loan",
+    "properties": {
+      "UserId": "9998",
+      "Amount": "1000"
+    },
+    "appliedActions": []
+  },
+  {
+    "type": "Order",
+    "properties": {
+      "UserId": "9997",
+      "Amount": "1000"
+    },
+    "appliedActions": []
+  }
+]

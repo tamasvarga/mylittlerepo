@@ -1,0 +1,8 @@
+{
+  "type": "Purchase",
+  "properties": {
+    "UserId": "9999",
+    "Amount": "1000"
+  },
+  "appliedActions": []
+}

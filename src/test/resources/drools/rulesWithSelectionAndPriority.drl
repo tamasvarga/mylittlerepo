@@ -1,0 +1,25 @@
+import hu.grape.nkmrtd.domain.Event;
+global hu.grape.nkmrtd.drools.ActionActivator activator;
+
+rule "Rule for purchase 1" salience 3
+activation-group "sendEmail"
+when
+  event:Event (type == 'Purchase' &&  getBigDecimalProperty("PriceTag") > 4000 && getBigDecimalProperty("Profit") > 5000)
+then
+  activator.sendEmail("Rule for purchase 1 in sendEmail group", event);
+end
+
+rule "Rule for purchase 2" salience 2
+activation-group "sendEmail"
+when
+  event:Event (type == 'Purchase' &&  getBigDecimalProperty("PriceTag") > 4000)
+then
+  activator.sendEmail("Rule for purchase 2 in sendEmail group", event);
+end
+
+rule "Rule for purchase 3"
+when
+  event:Event (type == 'Purchase')
+then
+  activator.sendEmail("Number rule for purchase 3 without group", event);
+end

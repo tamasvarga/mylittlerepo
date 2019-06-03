@@ -1,0 +1,18 @@
+import hu.grape.nkmrtd.domain.Event;
+global hu.grape.nkmrtd.drools.ActionActivator activator;
+
+rule "Hello test for order event"
+when
+  event:Event (type == 'Order')
+then
+  activator.sendEmail("Welcome test for order event", event);
+end
+
+
+
+
+
+
+
+
+
